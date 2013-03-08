@@ -15,40 +15,40 @@ http://www.diku.dk/hjemmesider/ansatte/torbenm/Basics/
 http://www.dabeaz.com/ply/
 
 Gramatica:
-	Program		->	Funs
+	Program     ->  Funs
 
-	Funs		->	Fun
-	Funs		->	Fun Funs
+	Funs        ->  Fun
+	Funs        ->  Fun Funs
 
-	Fun 		->	TypeId ( TypeIds ) = Exp
+	Fun         ->  TypeId ( TypeIds ) = Exp
 
-	TypeId		->	int id
-	TypeId		->	bool id
+	TypeId      ->  int id
+	TypeId      ->  bool id
 
-	TypeIds		->	TypeId
-	TypeIds		->	TypeId , TypeIds
+	TypeIds     ->  TypeId
+	TypeIds     ->  TypeId , TypeIds
 
-	Exp			->	num
-	Exp			->	id
-	Exp			->	Exp + Exp
-	Exp			->	if Exp then Exp else Exp
-	Exp			->	id ( Exps )
-	Exp 		->	let id = Exp in Exp
+	Exp         ->  num
+	Exp         ->  id
+	Exp         ->  Exp + Exp
+	Exp         ->  if Exp then Exp else Exp
+	Exp         ->  id ( Exps )
+	Exp         ->  let id = Exp in Exp
 
-	Exps		->	Exp
-	Exps		->	Exp , Exps
+	Exps        ->  Exp
+	Exps        ->  Exp , Exps
 
 TODO corregir 8 conflictos shift/reduce de la gramatica
 
 
 El autor de esta implementacion anhade ademas las siguientes reglas:
-	Fun 		->	TypeId ( ) = Exp
-	Exp 		->	BValue
-	BValue		->	true
-	BValue		->	false
+	Fun         ->  TypeId ( ) = Exp
+	Exp         ->  BValue
+	BValue      ->  true
+	BValue      ->  false
 
 
-Sergio Salomon Garcia	<sergio.salomon at alumnos.unican.es>
+Sergio Salomon Garcia   <sergio.salomon at alumnos.unican.es>
 """
 
 
@@ -195,7 +195,7 @@ class Parsing():
 	def run(self, s):
 		lexico = Lexing()
 		lexico.build()
-		global tokens	# TODO error que obliga llamar a build() de nuevo ?
+		global tokens   # TODO error que obliga llamar a build() de nuevo ?
 		self.parser = yacc.yacc(debug = True, module = self)
 		result = self.parser.parse(s, lexico)
 		return result
