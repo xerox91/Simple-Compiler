@@ -4,7 +4,7 @@ Simple-Compiler
 Sergio Salomon Garcia, *sergio.salomon at alumnos.unican.es*
 
 A **simple compiler construction using PLY** for the grammar 5.1 defined in the 
-book "Basics of Compiler Design" (Torben AE. Mogensen). 
+book "Basics of Compiler Design" (Torben AE. Mogensen).  
 This grammar corresponds to a functional language similar to ML.
 From this grammar, had been deduced the tokens for the *lexer*.
 
@@ -19,10 +19,10 @@ compilation.
 Some links
 ===============
 
-_Basics of Compiler Design, Torben AE. Mogensen_ :  
+_**Basics of Compiler Design**, Torben AE. Mogensen_ :  
 http://www.diku.dk/hjemmesider/ansatte/torbenm/Basics/
 
-_PLY (Python Lex-Yacc)_ :  
+_**PLY** (Python Lex-Yacc)_ :  
 http://www.dabeaz.com/ply/
 
 
